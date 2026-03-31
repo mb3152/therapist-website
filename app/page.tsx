@@ -1,65 +1,103 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div>
+      {/* Hero */}
+      <section className="bg-cream min-h-[85vh] flex flex-col items-center justify-center text-center px-6 py-24">
+        <div className="max-w-2xl">
+          <p className="font-sans text-xs tracking-[0.3em] uppercase text-sage mb-6">
+            Marriage and Family Therapist
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <h1 className="font-serif text-6xl md:text-7xl font-light text-forest leading-tight">
+            Rachel Zagarino
+          </h1>
+          <p className="font-sans text-sm tracking-widest text-warm-mid mt-2">LMFT</p>
+          <div className="w-16 h-px bg-tan mx-auto my-8" />
+          <p className="font-sans text-lg text-warm-mid leading-relaxed mb-10 max-w-xl mx-auto">
+            Helping families, couples, and individuals—including children and
+            adolescents—navigate toward healing, growth, and deeper
+            understanding.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block bg-forest text-cream font-sans text-xs tracking-widest uppercase px-8 py-4 hover:bg-sage transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Get in Touch
+          </Link>
         </div>
-      </main>
+      </section>
+
+      {/* Philosophy */}
+      <section className="bg-tan/30 py-20 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-serif text-3xl text-forest mb-6">
+            A Philosophy of Care
+          </h2>
+          <p className="font-sans text-warm-mid leading-relaxed">
+            Rachel&apos;s practice is built on trauma-informed thinking and attachment
+            theory, embracing both classical and post-modern family therapy
+            approaches. She is dedicated to empowering families and individuals
+            to understand their relational challenges and overcome the systemic
+            barriers that stand in the way of healing.
+          </p>
+          <Link
+            href="/about"
+            className="inline-block mt-8 font-sans text-xs tracking-widest uppercase text-forest border-b border-forest pb-0.5 hover:text-sage hover:border-sage transition-colors"
+          >
+            Learn More
+          </Link>
+        </div>
+      </section>
+
+      {/* Services preview */}
+      <section className="py-20 px-6 bg-cream">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-serif text-3xl text-forest text-center mb-12">
+            Areas of Practice
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { title: "Family Therapy", desc: "Supporting the entire family system" },
+              { title: "Couples Therapy", desc: "Strengthening relational bonds" },
+              { title: "Individual Therapy", desc: "Adults, children & adolescents" },
+              { title: "Trauma Treatment", desc: "Brainspotting for healing" },
+            ].map(({ title, desc }) => (
+              <div key={title} className="text-center p-6 border border-tan">
+                <h3 className="font-serif text-xl text-forest mb-2">{title}</h3>
+                <p className="font-sans text-sm text-warm-mid">{desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link
+              href="/services"
+              className="font-sans text-xs tracking-widest uppercase text-forest border-b border-forest pb-0.5 hover:text-sage hover:border-sage transition-colors"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA banner */}
+      <section className="bg-forest py-20 px-6 text-center">
+        <div className="max-w-xl mx-auto">
+          <h2 className="font-serif text-3xl text-cream mb-4">
+            Ready to Begin?
+          </h2>
+          <p className="font-sans text-cream/80 mb-8 leading-relaxed">
+            Taking the first step toward therapy is an act of courage. Rachel
+            is here to support you.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block bg-tan text-forest font-sans text-xs tracking-widest uppercase px-8 py-4 hover:bg-cream transition-colors"
+          >
+            Schedule a Consultation
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
