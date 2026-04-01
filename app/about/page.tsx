@@ -1,8 +1,17 @@
 import Link from "next/link";
+import Footer from "../components/Footer";
 
 export default function About() {
   return (
-    <div>
+    <div className="h-full overflow-y-auto">
+      {/* Beach hero banner */}
+      <div
+        className="h-64 md:h-80 bg-cover bg-center relative"
+        style={{ backgroundImage: "url(/images/beach-golden.jpg)" }}
+      >
+        <div className="absolute inset-0 bg-forest/30" />
+      </div>
+
       {/* Header */}
       <section className="bg-cream py-24 px-6">
         <div className="max-w-3xl mx-auto">
@@ -38,7 +47,14 @@ export default function About() {
             </p>
             <p>
               Rachel is trained using Brainspotting for the treatment of trauma
-              in children and adolescents.
+              in children and adolescents. She also utilizes Play Therapy and
+              Sandtray Therapy as powerful modalities for working with younger
+              clients, meeting them where they are developmentally.
+            </p>
+            <p>
+              Rather than adhering rigidly to a single model, Rachel integrates
+              across different therapeutic approaches to fit the exact needs of
+              each client and family she works with.
             </p>
           </div>
         </div>
@@ -94,6 +110,8 @@ export default function About() {
               "Trauma-Informed Practice",
               "Attachment Theory",
               "Brainspotting",
+              "Play Therapy",
+              "Sandtray Therapy",
             ].map((approach) => (
               <div
                 key={approach}
@@ -124,6 +142,7 @@ export default function About() {
           </Link>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

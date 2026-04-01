@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Footer from "../components/Footer";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -12,7 +13,7 @@ export default function Contact() {
   }
 
   return (
-    <div>
+    <div className="h-full overflow-y-auto">
       {/* Header */}
       <section className="bg-cream py-24 px-6">
         <div className="max-w-3xl mx-auto">
@@ -124,6 +125,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

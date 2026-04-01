@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Footer from "../components/Footer";
 
 const services = [
   {
@@ -49,7 +50,7 @@ const services = [
 
 export default function Services() {
   return (
-    <div>
+    <div className="h-full overflow-y-auto">
       {/* Header */}
       <section className="bg-cream py-24 px-6">
         <div className="max-w-3xl mx-auto">
@@ -118,6 +119,7 @@ export default function Services() {
           </Link>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

@@ -32,12 +32,9 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${dmSans.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col bg-cream text-warm-dark">
+      <body className="h-dvh flex flex-col overflow-hidden bg-cream text-warm-dark">
         <Nav />
-        <main className="flex-1">{children}</main>
-        <footer className="py-8 text-center font-sans text-sm text-warm-mid border-t border-tan bg-cream">
-          <p>© 2025 Rachel Zagarino, LMFT. All rights reserved.</p>
-        </footer>
+        <main className="flex-1 min-h-0">{children}</main>
       </body>
     </html>
   );
