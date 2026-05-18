@@ -62,8 +62,7 @@ export default function Contact() {
           <div className="w-16 h-px bg-tan mb-6" />
           <p className="font-sans text-warm-mid text-lg leading-relaxed">
             Rachel welcomes inquiries from individuals, couples, and families
-            seeking support. Reach out to schedule a consultation or ask any
-            questions.
+            seeking support. Reach out to schedule a consultation.
           </p>
         </div>
       </section>
