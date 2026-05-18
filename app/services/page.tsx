@@ -17,6 +17,16 @@ const services = [
     description:
       "Rachel works with individuals of all ages—including children and adolescents—creating a safe, supportive space to explore personal challenges, process emotions, and build resilience.",
   },
+  {
+    title: "Child Therapy",
+    description:
+      "Rachel works with children through Play Therapy to support a variety of concerns, including trauma, anxiety, and behavioral concerns.",
+  },
+  {
+    title: "Parent and Caregiver Support",
+    description:
+      "Rachel helps parents and caregivers develop tools, guidance, and support for navigating challenges within the family system.",
+  },
 ];
 
 export default function Services() {

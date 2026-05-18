@@ -265,33 +265,17 @@ export default function Home() {
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 opacity-0 translate-y-6 transition-all duration-700 ease-out"
           >
             {[
-              {
-                title: "Family Therapy",
-                desc: "Supporting the entire family system",
-              },
-              {
-                title: "Couples Therapy",
-                desc: "Strengthening relational bonds",
-              },
-              {
-                title: "Individual Therapy",
-                desc: "Adults, children & adolescents",
-              },
-              {
-                title: "Child Therapy",
-                desc: "Play Therapy for children can help with a variety of concerns including trauma, anxiety, and behavioral concerns",
-              },
-              {
-                title: "Parent and Caregiver Support",
-                desc: "Parent coaching can help provide tools and guidance",
-              },
-            ].map(({ title, desc }) => (
+              "Family Therapy",
+              "Couples Therapy",
+              "Individual Therapy",
+              "Child Therapy",
+              "Parent and Caregiver Support",
+            ].map((title) => (
               <div
                 key={title}
-                className="p-6 border border-cream/30 backdrop-blur-sm bg-cream/5"
+                className="p-6 border border-cream/30 backdrop-blur-sm bg-cream/5 flex items-center justify-center min-h-28"
               >
-                <h3 className="font-serif text-xl text-cream mb-2">{title}</h3>
-                <p className="font-sans text-sm text-cream/70">{desc}</p>
+                <h3 className="font-serif text-xl text-cream">{title}</h3>
               </div>
             ))}
           </div>
