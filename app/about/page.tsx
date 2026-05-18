@@ -5,10 +5,10 @@ export default function About() {
   return (
     <div className="h-full overflow-y-auto">
       {/* Gradient hero banner with portrait */}
-      <div className="h-72 md:h-96 relative overflow-hidden bg-[linear-gradient(135deg,#2f4b3a_0%,#58765e_45%,#9aa98f_100%)]">
+      <div className="relative overflow-hidden bg-[linear-gradient(135deg,#2f4b3a_0%,#58765e_45%,#9aa98f_100%)] px-6 py-12 md:py-16">
         <div className="absolute inset-0 bg-cream/10" />
-        <div className="absolute right-8 md:right-16 bottom-0 translate-y-1/3 z-10">
-          <div className="w-52 h-68 md:w-72 md:h-96 overflow-hidden border-4 border-cream shadow-lg">
+        <div className="relative z-10 max-w-5xl mx-auto flex justify-center md:justify-end">
+          <div className="w-52 aspect-[4/5] md:w-72 overflow-hidden border-4 border-cream shadow-lg">
             <img
               src="/images/IMG_6910.jpeg"
               alt="Rachel Zagarino"
@@ -33,10 +33,10 @@ export default function About() {
           <div className="w-16 h-px bg-tan mb-10" />
           <div className="font-sans text-warm-dark leading-8 space-y-6 text-lg">
             <p>
-              Rachel is a Family Therapist who specializes in working with
-              families, couples, and individuals, including children and
-              adolescents. Rachel received her degree from Drexel University
-              with a Masters in Family Therapy.
+              Rachel is a Marriage and Family Therapist who specializes in
+              working with families, couples, and individuals, including
+              children and adolescents. Rachel received her degree from Drexel
+              University with a Masters in Family Therapy.
             </p>
             <p>
               Rachel is passionate about working with children and adolescents
@@ -46,16 +46,10 @@ export default function About() {
             </p>
             <p>
               Rachel has developed a philosophy of practice that encompasses
-              trauma-informed thinking with attachment theory perspectives. This
-              philosophy lends itself well to both classical and post-modern
-              family therapy approaches, including Experiential, Contextual, and
-              Eco-systemic Structural Family Therapy (ESFT).
-            </p>
-            <p>
-              Rachel is trained using Brainspotting for the treatment of trauma
-              in children and adolescents. She also utilizes Play Therapy and
-              Sandtray Therapy as powerful modalities for working with younger
-              clients, meeting them where they are developmentally.
+              trauma-informed thinking with attachment theory perspectives. She
+              has training in Trauma-Focused Cognitive Behavioral Therapy, Sand
+              Tray Therapy, Play Therapy, Contextual Therapy, and Eco-systemic
+              Structural Family Therapy.
             </p>
             <p>
               Rather than adhering rigidly to a single model, Rachel integrates
@@ -86,44 +80,12 @@ export default function About() {
                 label: "Specialty",
                 value: "Children, Adolescents & Families",
               },
-              {
-                label: "Training",
-                value: "Brainspotting Practitioner",
-              },
             ].map(({ label, value }) => (
               <div key={label} className="border-l-2 border-sage pl-4">
                 <p className="font-sans text-xs tracking-widest uppercase text-sage mb-1">
                   {label}
                 </p>
                 <p className="font-sans text-warm-dark">{value}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Approaches */}
-      <section className="py-16 px-6 bg-cream">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-2xl text-forest mb-8">
-            Therapeutic Approaches
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              "Experiential Family Therapy",
-              "Contextual Family Therapy",
-              "Eco-systemic Structural Family Therapy (ESFT)",
-              "Trauma-Informed Practice",
-              "Attachment Theory",
-              "Brainspotting",
-              "Play Therapy",
-              "Sandtray Therapy",
-            ].map((approach) => (
-              <div
-                key={approach}
-                className="bg-tan/30 px-4 py-3 font-sans text-sm text-warm-dark"
-              >
-                {approach}
               </div>
             ))}
           </div>
