@@ -187,9 +187,17 @@ export default function Contact() {
                 <p className="font-sans text-xs tracking-widest uppercase text-sage mb-1">
                   Rates
                 </p>
-                <div className="space-y-2 font-sans text-warm-dark">
-                  <p>Individual Therapy: $135 per session</p>
-                  <p>Couples, Family &amp; Play Therapy: $150 per session</p>
+                <div className="space-y-3 font-sans text-warm-dark">
+                  <div className="border-l-2 border-sage pl-4">
+                    <p className="text-sm text-warm-mid">Individual Therapy</p>
+                    <p className="text-lg text-forest">$135 per session</p>
+                  </div>
+                  <div className="border-l-2 border-sage pl-4">
+                    <p className="text-sm text-warm-mid">
+                      Couples, Family &amp; Play Therapy
+                    </p>
+                    <p className="text-lg text-forest">$150 per session</p>
+                  </div>
                 </div>
               </div>
               <div>
