@@ -282,8 +282,8 @@ export default function Home() {
                 desc: "Play Therapy for children can help with a variety of concerns including trauma, anxiety, and behavioral concerns",
               },
               {
-                title: "Attachment & Relational Dynamics",
-                desc: "Understanding patterns in how we connect",
+                title: "Parent and Caregiver Support",
+                desc: "Parent coaching can help provide tools and guidance",
               },
             ].map(({ title, desc }) => (
               <div

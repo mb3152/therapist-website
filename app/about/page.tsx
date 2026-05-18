@@ -3,59 +3,54 @@ import Footer from "../components/Footer";
 
 export default function About() {
   return (
-    <div className="h-full overflow-y-auto">
-      {/* Gradient hero banner with portrait */}
-      <div className="relative overflow-hidden bg-[linear-gradient(135deg,#2f4b3a_0%,#58765e_45%,#9aa98f_100%)] px-6 py-12 md:py-16">
-        <div className="absolute inset-0 bg-cream/10" />
-        <div className="relative z-10 max-w-5xl mx-auto flex justify-center md:justify-end">
-          <div className="w-52 aspect-[4/5] md:w-72 overflow-hidden border-4 border-cream shadow-lg">
+    <div className="h-full overflow-y-auto bg-[linear-gradient(135deg,#f7f3ec_0%,#edf0e7_42%,#dce5d3_100%)]">
+      {/* Header */}
+      <section className="py-24 px-6">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_14rem] gap-12 md:gap-16 items-start">
+          <div>
+            <p className="font-sans text-xs tracking-[0.3em] uppercase text-sage mb-4">
+              About
+            </p>
+            <h1 className="font-serif text-5xl text-forest mb-2">
+              Rachel Zagarino
+            </h1>
+            <p className="font-sans text-warm-mid mb-10">
+              LMFT &middot; Marriage and Family Therapist
+            </p>
+            <div className="w-16 h-px bg-tan mb-10" />
+            <div className="font-sans text-warm-dark leading-8 space-y-6 text-lg">
+              <p>
+                Rachel is a Marriage and Family Therapist who specializes in
+                working with families, couples, and individuals, including
+                children and adolescents. Rachel received her degree from Drexel
+                University with a Masters in Family Therapy.
+              </p>
+              <p>
+                Rachel is passionate about working with children and adolescents
+                and their families, empowering the family system to understand
+                their relational challenges, and helping families navigate
+                systemic barriers that impede their ability to grow and heal.
+              </p>
+              <p>
+                Rachel has developed a philosophy of practice that encompasses
+                trauma-informed thinking with attachment theory perspectives.
+                She has training in Trauma-Focused Cognitive Behavioral Therapy,
+                Sand Tray Therapy, Play Therapy, Contextual Therapy, and
+                Eco-systemic Structural Family Therapy.
+              </p>
+              <p>
+                Rather than adhering rigidly to a single model, Rachel
+                integrates across different therapeutic approaches to fit the
+                exact needs of each client and family she works with.
+              </p>
+            </div>
+          </div>
+          <div className="w-40 aspect-[4/5] md:w-full overflow-hidden border-4 border-cream shadow-lg justify-self-center md:justify-self-end">
             <img
               src="/images/IMG_6910.jpeg"
               alt="Rachel Zagarino"
               className="w-full h-full object-cover"
             />
-          </div>
-        </div>
-      </div>
-
-      {/* Header */}
-      <section className="bg-cream py-24 px-6">
-        <div className="max-w-3xl mx-auto">
-          <p className="font-sans text-xs tracking-[0.3em] uppercase text-sage mb-4">
-            About
-          </p>
-          <h1 className="font-serif text-5xl text-forest mb-2">
-            Rachel Zagarino
-          </h1>
-          <p className="font-sans text-warm-mid mb-10">
-            LMFT &middot; Marriage and Family Therapist
-          </p>
-          <div className="w-16 h-px bg-tan mb-10" />
-          <div className="font-sans text-warm-dark leading-8 space-y-6 text-lg">
-            <p>
-              Rachel is a Marriage and Family Therapist who specializes in
-              working with families, couples, and individuals, including
-              children and adolescents. Rachel received her degree from Drexel
-              University with a Masters in Family Therapy.
-            </p>
-            <p>
-              Rachel is passionate about working with children and adolescents
-              and their families, empowering the family system to understand
-              their relational challenges, and helping families navigate
-              systemic barriers that impede their ability to grow and heal.
-            </p>
-            <p>
-              Rachel has developed a philosophy of practice that encompasses
-              trauma-informed thinking with attachment theory perspectives. She
-              has training in Trauma-Focused Cognitive Behavioral Therapy, Sand
-              Tray Therapy, Play Therapy, Contextual Therapy, and Eco-systemic
-              Structural Family Therapy.
-            </p>
-            <p>
-              Rather than adhering rigidly to a single model, Rachel integrates
-              across different therapeutic approaches to fit the exact needs of
-              each client and family she works with.
-            </p>
           </div>
         </div>
       </section>
@@ -75,10 +70,6 @@ export default function About() {
               {
                 label: "License",
                 value: "Licensed Marriage and Family Therapist (LMFT)",
-              },
-              {
-                label: "Specialty",
-                value: "Children, Adolescents & Families",
               },
             ].map(({ label, value }) => (
               <div key={label} className="border-l-2 border-sage pl-4">
