@@ -270,10 +270,14 @@ export default function Home() {
               "Individual Therapy",
               "Child Therapy",
               "Parent and Caregiver Support",
-            ].map((title) => (
+            ].map((title, index) => (
               <div
                 key={title}
-                className="p-6 border border-cream/30 backdrop-blur-sm bg-cream/5 flex items-center justify-center min-h-28"
+                className={`p-6 border border-cream/30 backdrop-blur-sm bg-cream/5 flex items-center justify-center min-h-28 ${
+                  index === 3 ? "md:col-start-1 md:col-end-3 md:justify-self-end md:w-[calc(50%-0.75rem)]" : ""
+                } ${
+                  index === 4 ? "md:col-start-2 md:col-end-4 md:justify-self-start md:w-[calc(50%-0.75rem)]" : ""
+                }`}
               >
                 <h3 className="font-serif text-xl text-cream">{title}</h3>
               </div>
