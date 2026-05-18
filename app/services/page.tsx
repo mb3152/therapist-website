@@ -61,15 +61,19 @@ export default function Services() {
 
       {/* Services list */}
       <section className="py-16 px-6 bg-cream">
-        <div className="max-w-3xl mx-auto space-y-16">
-          {services.map(({ title, description }) => (
-            <div key={title}>
-              <h2 className="font-serif text-3xl text-forest mb-4">{title}</h2>
-              <p className="font-sans text-warm-mid leading-relaxed">
-                {description}
-              </p>
-            </div>
-          ))}
+        <div className="max-w-5xl mx-auto">
+          <div className="max-w-3xl space-y-14">
+            {services.map(({ title, description }) => (
+              <div key={title}>
+                <h2 className="font-serif text-3xl text-forest mb-4">
+                  {title}
+                </h2>
+                <p className="font-sans text-warm-mid leading-relaxed">
+                  {description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
