@@ -33,7 +33,7 @@ export default function Services() {
   return (
     <div className="h-full overflow-y-auto">
       {/* Header */}
-      <section className="bg-cream py-24 px-6 overflow-hidden">
+      <section className="bg-cream pt-24 pb-12 px-6 overflow-hidden">
         <div className="max-w-5xl mx-auto flex items-center gap-12">
           <div className="flex-1 min-w-0">
             <p className="font-sans text-xs tracking-[0.3em] uppercase text-sage mb-4">
@@ -60,7 +60,7 @@ export default function Services() {
       </section>
 
       {/* Services list */}
-      <section className="py-16 px-6 bg-cream">
+      <section className="pt-4 pb-16 px-6 bg-cream">
         <div className="max-w-5xl mx-auto">
           <div className="max-w-3xl space-y-14">
             {services.map(({ title, description }) => (
