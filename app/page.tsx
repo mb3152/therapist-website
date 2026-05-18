@@ -262,7 +262,7 @@ export default function Home() {
           </h2>
           <div
             data-stagger
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 opacity-0 translate-y-6 transition-all duration-700 ease-out"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-6 opacity-0 translate-y-6 transition-all duration-700 ease-out"
           >
             {[
               "Family Therapy",
@@ -273,10 +273,8 @@ export default function Home() {
             ].map((title, index) => (
               <div
                 key={title}
-                className={`p-6 border border-cream/30 backdrop-blur-sm bg-cream/5 flex items-center justify-center min-h-28 ${
-                  index === 3 ? "md:col-start-1 md:col-end-3 md:justify-self-end md:w-[calc(50%-0.75rem)]" : ""
-                } ${
-                  index === 4 ? "md:col-start-2 md:col-end-4 md:justify-self-start md:w-[calc(50%-0.75rem)]" : ""
+                className={`p-6 border border-cream/30 backdrop-blur-sm bg-cream/5 flex items-center justify-center min-h-28 md:col-span-2 ${
+                  index === 3 ? "md:col-start-2" : ""
                 }`}
               >
                 <h3 className="font-serif text-xl text-cream">{title}</h3>
