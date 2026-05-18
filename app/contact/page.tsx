@@ -141,7 +141,7 @@ export default function Contact() {
                     htmlFor="message"
                     className="block font-sans text-xs tracking-widest uppercase text-warm-mid mb-2"
                   >
-                    Message
+                    Reason for Seeking Therapy
                   </label>
                   <textarea
                     id="message"
@@ -179,27 +179,32 @@ export default function Contact() {
             <div className="space-y-6">
               <div>
                 <p className="font-sans text-xs tracking-widest uppercase text-sage mb-1">
-                  Practice
-                </p>
-                <p className="font-sans text-warm-dark">New Narratives Therapy</p>
-              </div>
-              <div>
-                <p className="font-sans text-xs tracking-widest uppercase text-sage mb-1">
-                  Email
-                </p>
-                <p className="font-sans text-warm-dark">
-                  rachelzagtherapy@icloud.com
-                </p>
-              </div>
-              <div>
-                <p className="font-sans text-xs tracking-widest uppercase text-sage mb-1">
                   Location
                 </p>
-                <p className="font-sans text-warm-dark">Philadelphia, PA</p>
+                <p className="font-sans text-warm-dark">Jenkintown, PA</p>
+              </div>
+              <div>
+                <p className="font-sans text-xs tracking-widest uppercase text-sage mb-1">
+                  Rates
+                </p>
+                <div className="space-y-2 font-sans text-warm-dark">
+                  <p>Individual Therapy: $135 per session</p>
+                  <p>Couples, Family &amp; Play Therapy: $150 per session</p>
+                </div>
+              </div>
+              <div>
+                <p className="font-sans text-xs tracking-widest uppercase text-sage mb-1">
+                  Payment
+                </p>
+                <p className="font-sans text-warm-dark leading-relaxed">
+                  Payment is due at time of service. Rachel does not take
+                  insurance but can provide superbills for insurance
+                  reimbursement.
+                </p>
               </div>
               <div className="border-t border-tan pt-6">
                 <p className="font-sans text-sm text-warm-mid leading-relaxed">
-                  Rachel typically responds to inquiries within 1&ndash;2
+                  Rachel typically responds to inquiries within 2&ndash;3
                   business days. If you are experiencing a mental health
                   emergency, please contact the 988 Suicide &amp; Crisis
                   Lifeline by calling or texting{" "}
