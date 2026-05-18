@@ -4,12 +4,9 @@ import Footer from "../components/Footer";
 export default function About() {
   return (
     <div className="h-full overflow-y-auto">
-      {/* Beach hero banner with portrait */}
-      <div
-        className="h-72 md:h-96 bg-cover bg-center relative"
-        style={{ backgroundImage: "url(/images/beach-golden.jpg)" }}
-      >
-        <div className="absolute inset-0 bg-forest/20" />
+      {/* Gradient hero banner with portrait */}
+      <div className="h-72 md:h-96 relative overflow-hidden bg-[linear-gradient(135deg,#2f4b3a_0%,#58765e_45%,#9aa98f_100%)]">
+        <div className="absolute inset-0 bg-cream/10" />
         <div className="absolute right-8 md:right-16 bottom-0 translate-y-1/3 z-10">
           <div className="w-52 h-68 md:w-72 md:h-96 overflow-hidden border-4 border-cream shadow-lg">
             <img
