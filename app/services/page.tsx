@@ -52,20 +52,29 @@ export default function Services() {
   return (
     <div className="h-full overflow-y-auto">
       {/* Header */}
-      <section className="bg-cream py-24 px-6">
-        <div className="max-w-3xl mx-auto">
-          <p className="font-sans text-xs tracking-[0.3em] uppercase text-sage mb-4">
-            Services
-          </p>
-          <h1 className="font-serif text-5xl text-forest mb-4">
-            Areas of Practice
-          </h1>
-          <div className="w-16 h-px bg-tan mb-6" />
-          <p className="font-sans text-warm-mid text-lg leading-relaxed">
-            Rachel offers therapy for families, couples, and individuals, with a
-            particular passion for working with children, adolescents, and their
-            families.
-          </p>
+      <section className="bg-cream py-24 px-6 overflow-hidden">
+        <div className="max-w-5xl mx-auto flex items-center gap-12">
+          <div className="flex-1 min-w-0">
+            <p className="font-sans text-xs tracking-[0.3em] uppercase text-sage mb-4">
+              Services
+            </p>
+            <h1 className="font-serif text-5xl text-forest mb-4">
+              Areas of Practice
+            </h1>
+            <div className="w-16 h-px bg-tan mb-6" />
+            <p className="font-sans text-warm-mid text-lg leading-relaxed">
+              Rachel offers therapy for families, couples, and individuals, with a
+              particular passion for working with children, adolescents, and their
+              families.
+            </p>
+          </div>
+          <div className="w-96 h-80 flex-shrink-0 overflow-hidden">
+            <img
+              src="/images/beach-paint-b.jpg"
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </section>
 

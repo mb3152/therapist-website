@@ -4,12 +4,21 @@ import Footer from "../components/Footer";
 export default function About() {
   return (
     <div className="h-full overflow-y-auto">
-      {/* Beach hero banner */}
+      {/* Beach hero banner with portrait */}
       <div
-        className="h-64 md:h-80 bg-cover bg-center relative"
+        className="h-72 md:h-96 bg-cover bg-center relative"
         style={{ backgroundImage: "url(/images/beach-golden.jpg)" }}
       >
-        <div className="absolute inset-0 bg-forest/30" />
+        <div className="absolute inset-0 bg-forest/20" />
+        <div className="absolute right-8 md:right-16 bottom-0 translate-y-1/3 z-10">
+          <div className="w-52 h-68 md:w-72 md:h-96 overflow-hidden border-4 border-cream shadow-lg">
+            <img
+              src="/images/IMG_6910.jpeg"
+              alt="Rachel Zagarino"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
       </div>
 
       {/* Header */}
