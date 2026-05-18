@@ -289,7 +289,7 @@ export default function Home() {
               href="/services"
               className="inline-block mt-10 font-sans text-xs tracking-widest uppercase text-cream border-b border-cream/60 pb-0.5 hover:text-cream/70 hover:border-cream/40 transition-colors"
             >
-              View All Services
+              Learn More
             </Link>
           </div>
         </div>
