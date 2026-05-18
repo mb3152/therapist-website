@@ -127,7 +127,7 @@ export default function Home() {
               data-stagger
               className="font-sans text-base text-cream/85 leading-relaxed mb-10 max-w-sm opacity-0 translate-y-6 transition-all duration-700 ease-out"
             >
-              Helping families, couples, and individuals navigate toward healing,
+              Helping children, couples, and individuals navigate toward healing,
               growth, and deeper understanding.
             </p>
             <div
@@ -278,16 +278,12 @@ export default function Home() {
                 desc: "Adults, children & adolescents",
               },
               {
-                title: "Trauma Treatment",
-                desc: "Play therapy & sandtray therapy",
+                title: "Child Therapy",
+                desc: "Play Therapy for children can help with a variety of concerns including trauma, anxiety, and behavioral concerns",
               },
               {
                 title: "Attachment & Relational Dynamics",
                 desc: "Understanding patterns in how we connect",
-              },
-              {
-                title: "Trauma & Complex PTSD",
-                desc: "Healing from layered and chronic trauma",
               },
             ].map(({ title, desc }) => (
               <div
