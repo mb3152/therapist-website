@@ -20,28 +20,34 @@ export default function About() {
             <div className="w-16 h-px bg-tan mb-10" />
             <div className="font-sans text-warm-dark leading-8 space-y-6 text-lg">
               <p>
-                Rachel is a Marriage and Family Therapist who specializes in
-                working with families, couples, and individuals, including
-                children and adolescents. Rachel received her degree from Drexel
-                University with a Masters in Family Therapy.
+                Rachel is a Marriage and Family Therapist who works with
+                children, adolescents, adults, couples, and families. She
+                received her degree from Drexel University with a Master&apos;s
+                in Family Therapy.
               </p>
               <p>
-                Rachel is passionate about working with children and adolescents
-                and their families, empowering the family system to understand
-                their relational challenges, and helping families navigate
-                systemic barriers that impede their ability to grow and heal.
+                Rachel brings a relational, trauma-informed approach to her
+                work, helping clients better understand patterns, emotions, and
+                experiences that may be shaping their relationships and sense of
+                self. She supports individuals and couples in navigating stress,
+                life transitions, communication challenges, family conflict, and
+                emotional healing.
               </p>
               <p>
-                Rachel has developed a philosophy of practice that encompasses
-                trauma-informed thinking with attachment theory perspectives.
-                She has training in Trauma-Focused Cognitive Behavioral Therapy,
-                Sand Tray Therapy, Play Therapy, Contextual Therapy, and
-                Eco-systemic Structural Family Therapy.
+                Rachel also has a deep passion for working with children and
+                adolescents, as well as supporting parents and caregivers. She
+                helps families better understand relational challenges,
+                strengthen connection, and navigate systemic barriers that can
+                make growth and healing more difficult.
               </p>
               <p>
-                Rather than adhering rigidly to a single model, Rachel
-                integrates across different therapeutic approaches to fit the
-                exact needs of each client and family she works with.
+                Rachel&apos;s practice integrates trauma-informed thinking with
+                attachment theory perspectives. She has training in
+                Trauma-Focused Cognitive Behavioral Therapy, Sand Tray Therapy,
+                Play Therapy, Contextual Therapy, and Eco-systemic Structural
+                Family Therapy. Rather than adhering rigidly to a single model,
+                Rachel draws from different therapeutic approaches to meet the
+                specific needs of each client, couple, or family she works with.
               </p>
             </div>
           </div>

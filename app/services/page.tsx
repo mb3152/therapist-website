@@ -15,7 +15,7 @@ const services = [
   {
     title: "Individual Therapy",
     description:
-      "Rachel works with adults and children and adolescents 7 years and older, creating a safe, supportive space to explore personal challenges, process emotions, and build resilience.",
+      "Rachel works with adults, children, and adolescents ages 7 and older, creating a supportive space to explore emotions, relationships, life transitions, stress, anxiety, trauma, and personal growth. Her approach helps clients better understand themselves, build resilience, and develop tools for navigating challenges with greater clarity and confidence.",
   },
   {
     title: "Child Therapy",
