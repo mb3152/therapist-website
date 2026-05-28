@@ -15,7 +15,7 @@ const services = [
   {
     title: "Individual Therapy",
     description:
-      "Rachel works with individuals of all ages—including children and adolescents—creating a safe, supportive space to explore personal challenges, process emotions, and build resilience.",
+      "Rachel works with adults and children and adolescents 7 years and older, creating a safe, supportive space to explore personal challenges, process emotions, and build resilience.",
   },
   {
     title: "Child Therapy",
@@ -33,23 +33,23 @@ export default function Services() {
   return (
     <div className="h-full overflow-y-auto">
       {/* Header */}
-      <section className="bg-cream pt-24 pb-12 px-6 overflow-hidden">
-        <div className="max-w-5xl mx-auto flex items-center gap-12">
+      <section className="bg-cream pt-20 pb-10 px-5 sm:pt-24 sm:pb-12 sm:px-6 overflow-hidden">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_24rem] items-center gap-8 md:gap-12">
           <div className="flex-1 min-w-0">
             <p className="font-sans text-xs tracking-[0.3em] uppercase text-sage mb-4">
               Services
             </p>
-            <h1 className="font-serif text-5xl text-forest mb-4">
+            <h1 className="font-serif text-4xl sm:text-5xl text-forest mb-4">
               Areas of Practice
             </h1>
             <div className="w-16 h-px bg-tan mb-6" />
-            <p className="font-sans text-warm-mid text-lg leading-relaxed">
+            <p className="font-sans text-warm-mid text-base sm:text-lg leading-relaxed">
               Rachel offers therapy for families, couples, and individuals, with a
               particular passion for working with children, adolescents, and their
               families.
             </p>
           </div>
-          <div className="w-96 h-80 flex-shrink-0 overflow-hidden">
+          <div className="hidden md:block w-full h-80 overflow-hidden">
             <img
               src="/images/beach-paint-b.jpg"
               alt=""
@@ -60,12 +60,12 @@ export default function Services() {
       </section>
 
       {/* Services list */}
-      <section className="pt-4 pb-16 px-6 bg-cream">
+      <section className="pt-0 pb-14 px-5 sm:pb-16 sm:px-6 bg-cream">
         <div className="max-w-5xl mx-auto">
-          <div className="max-w-3xl space-y-14">
+          <div className="max-w-3xl space-y-10 sm:space-y-12 md:space-y-14">
             {services.map(({ title, description }) => (
               <div key={title}>
-                <h2 className="font-serif text-3xl text-forest mb-4">
+                <h2 className="font-serif text-2xl sm:text-3xl text-forest mb-3 sm:mb-4">
                   {title}
                 </h2>
                 <p className="font-sans text-warm-mid leading-relaxed">
@@ -78,7 +78,7 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="bg-forest py-20 px-6 text-center">
+      <section className="bg-forest py-16 px-5 sm:py-20 sm:px-6 text-center">
         <div className="max-w-xl mx-auto">
           <h2 className="font-serif text-3xl text-cream mb-4">
             Start Your Journey

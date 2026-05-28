@@ -241,7 +241,7 @@ export default function Home() {
       <section
         data-section
         data-index={2}
-        className="snap-start h-full relative flex items-center justify-center px-6 overflow-hidden group"
+        className="snap-start min-h-full md:h-full relative flex items-center justify-center px-5 sm:px-6 py-20 md:py-0 overflow-visible md:overflow-hidden group"
       >
         <div
           className="absolute inset-0"
@@ -256,13 +256,13 @@ export default function Home() {
           </p>
           <h2
             data-stagger
-            className="font-serif text-4xl md:text-5xl text-cream mb-12 opacity-0 translate-y-6 transition-all duration-700 ease-out"
+            className="font-serif text-3xl sm:text-4xl md:text-5xl text-cream mb-6 sm:mb-8 md:mb-12 opacity-0 translate-y-6 transition-all duration-700 ease-out"
           >
             Areas of Practice
           </h2>
           <div
             data-stagger
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-6 opacity-0 translate-y-6 transition-all duration-700 ease-out"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-3 sm:gap-4 md:gap-6 opacity-0 translate-y-6 transition-all duration-700 ease-out"
           >
             {[
               "Family Therapy",
@@ -273,11 +273,13 @@ export default function Home() {
             ].map((title, index) => (
               <div
                 key={title}
-                className={`p-6 border border-cream/30 backdrop-blur-sm bg-cream/5 flex items-center justify-center min-h-28 md:col-span-2 ${
+                className={`p-4 sm:p-5 md:p-6 border border-cream/30 backdrop-blur-sm bg-cream/5 flex items-center justify-center min-h-20 sm:min-h-24 md:min-h-28 md:col-span-2 ${
                   index === 3 ? "md:col-start-2" : ""
                 }`}
               >
-                <h3 className="font-serif text-xl text-cream">{title}</h3>
+                <h3 className="font-serif text-lg sm:text-xl leading-tight text-cream">
+                  {title}
+                </h3>
               </div>
             ))}
           </div>
@@ -287,7 +289,7 @@ export default function Home() {
           >
             <Link
               href="/services"
-              className="inline-block mt-10 font-sans text-xs tracking-widest uppercase text-cream border-b border-cream/60 pb-0.5 hover:text-cream/70 hover:border-cream/40 transition-colors"
+              className="inline-block mt-7 sm:mt-8 md:mt-10 font-sans text-xs tracking-widest uppercase text-cream border-b border-cream/60 pb-0.5 hover:text-cream/70 hover:border-cream/40 transition-colors"
             >
               Learn More
             </Link>
@@ -341,7 +343,7 @@ export default function Home() {
       </section>
 
       {/* Scroll progress dots */}
-      <nav className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
+      <nav className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden sm:flex flex-col gap-3">
         {sections.map((s, i) => (
           <button
             key={s.id}
