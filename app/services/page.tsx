@@ -1,37 +1,36 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import StructuredData from "../components/StructuredData";
 import Footer from "../components/Footer";
+import {
+  breadcrumbJsonLd,
+  createPageMetadata,
+  serviceQuestions,
+  serviceQuestionsJsonLd,
+  servicesJsonLd,
+  therapyServices,
+} from "../lib/seo";
 
-const services = [
-  {
-    title: "Family Therapy",
-    description:
-      "Rachel works with the entire family system to understand relational dynamics and navigate challenges together. Her approach empowers families to overcome systemic barriers and build stronger, more connected relationships.",
-  },
-  {
-    title: "Couples Therapy",
-    description:
-      "Rachel supports couples in deepening their understanding of each other and strengthening their relational bond. Sessions focus on improving communication, rebuilding trust, and developing tools for lasting connection.",
-  },
-  {
-    title: "Individual Therapy",
-    description:
-      "Rachel works with adults, children, and adolescents ages 7 and older, creating a supportive space to explore emotions, relationships, life transitions, stress, anxiety, trauma, and personal growth. Her approach helps clients better understand themselves, build resilience, and develop tools for navigating challenges with greater clarity and confidence.",
-  },
-  {
-    title: "Child Therapy",
-    description:
-      "Rachel works with children through Play Therapy to support a variety of concerns, including trauma, anxiety, and behavioral concerns.",
-  },
-  {
-    title: "Parent and Caregiver Support",
-    description:
-      "Rachel helps parents and caregivers develop tools, guidance, and support for navigating challenges within the family system.",
-  },
-];
+export const metadata: Metadata = createPageMetadata({
+  title: "Therapy Services in Jenkintown, PA",
+  description:
+    "Explore therapy services in Jenkintown, PA, including individual therapy, couples therapy, family therapy, child therapy, and parent support with Rachel Zagarino, LMFT.",
+  path: "/services",
+});
 
 export default function Services() {
+  const jsonLd = [
+    breadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "Services", path: "/services" },
+    ]),
+    servicesJsonLd(),
+    serviceQuestionsJsonLd(),
+  ];
+
   return (
     <div className="h-full overflow-y-auto">
+      <StructuredData data={jsonLd} />
       {/* Header */}
       <section className="bg-cream pt-20 pb-10 px-5 sm:pt-24 sm:pb-12 sm:px-6 overflow-hidden">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_24rem] items-center gap-8 md:gap-12">
@@ -40,13 +39,13 @@ export default function Services() {
               Services
             </p>
             <h1 className="font-serif text-4xl sm:text-5xl text-forest mb-4">
-              Areas of Practice
+              Therapy Services in Jenkintown, PA
             </h1>
             <div className="w-16 h-px bg-tan mb-6" />
             <p className="font-sans text-warm-mid text-base sm:text-lg leading-relaxed">
-              Rachel offers therapy for families, couples, and individuals, with a
-              particular passion for working with children, adolescents, and their
-              families.
+              Rachel offers therapy for individuals, couples, children,
+              adolescents, and families in Jenkintown, PA, with a particular
+              passion for supporting children, teens, parents, and caregivers.
             </p>
           </div>
           <div className="hidden md:block w-full h-80 overflow-hidden">
@@ -63,7 +62,7 @@ export default function Services() {
       <section className="pt-0 pb-14 px-5 sm:pb-16 sm:px-6 bg-cream">
         <div className="max-w-5xl mx-auto">
           <div className="max-w-3xl space-y-10 sm:space-y-12 md:space-y-14">
-            {services.map(({ title, description }) => (
+            {therapyServices.map(({ title, description }) => (
               <div key={title}>
                 <h2 className="font-serif text-2xl sm:text-3xl text-forest mb-3 sm:mb-4">
                   {title}
@@ -73,6 +72,29 @@ export default function Services() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Common questions */}
+      <section className="pt-0 pb-14 px-5 sm:pb-16 sm:px-6 bg-cream">
+        <div className="max-w-5xl mx-auto">
+          <div className="max-w-3xl border-t border-tan pt-12">
+            <h2 className="font-serif text-2xl sm:text-3xl text-forest mb-8">
+              Common Questions
+            </h2>
+            <div className="space-y-8">
+              {serviceQuestions.map(({ question, answer }) => (
+                <div key={question}>
+                  <h3 className="font-serif text-xl text-forest mb-2">
+                    {question}
+                  </h3>
+                  <p className="font-sans text-warm-mid leading-relaxed">
+                    {answer}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

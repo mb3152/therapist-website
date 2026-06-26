@@ -1,9 +1,37 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import StructuredData from "../components/StructuredData";
 import Footer from "../components/Footer";
+import { breadcrumbJsonLd, createPageMetadata, absoluteUrl } from "../lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "About Rachel",
+  description:
+    "Learn about Rachel Zagarino, LMFT, a marriage and family therapist in Jenkintown, PA, and her trauma-informed, relational approach to care.",
+  path: "/about",
+});
 
 export default function About() {
+  const jsonLd = [
+    breadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+    ]),
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "@id": absoluteUrl("/about#about"),
+      url: absoluteUrl("/about"),
+      name: "About Rachel Zagarino, LMFT",
+      about: {
+        "@id": absoluteUrl("/#rachel-zagarino"),
+      },
+    },
+  ];
+
   return (
     <div className="h-full overflow-y-auto bg-[linear-gradient(135deg,#f7f3ec_0%,#edf0e7_42%,#dce5d3_100%)]">
+      <StructuredData data={jsonLd} />
       {/* Header */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_14rem] gap-12 md:gap-16 items-start">
